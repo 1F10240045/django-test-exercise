@@ -44,7 +44,6 @@ class TaskModelTestCase(TestCase):
         self.assertTrue(task.is_overdue(current))
     
     def test_is_overdue_none(self):
-        # 期限のないタスク
         current = timezone.make_aware(datetime(2024, 7, 10, 0, 0, 0))
         task = Task(title='task3', due_at=None)
         task.save()
